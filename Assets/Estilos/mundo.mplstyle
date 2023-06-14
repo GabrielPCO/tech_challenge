@@ -1,0 +1,11 @@
+axes.spines.right: True 
+axes.spines.top: True
+axes.spines.bottom: True
+axes.spines.left: True
+text.color : "#000000"
+xtick.bottom : False
+xtick.labelbottom : False
+ytick.left : False
+ytick.labelleft : False
+ytick.minor.left : False
+ytick.labelright : False

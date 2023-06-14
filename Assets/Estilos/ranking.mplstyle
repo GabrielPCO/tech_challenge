@@ -1,0 +1,16 @@
+axes.spines.right : True 
+axes.spines.top : False 
+axes.spines.bottom : False 
+axes.spines.left : True 
+xtick.bottom : False 
+xtick.labelbottom : True
+ytick.minor.left : False
+ytick.labelleft: True
+font.size : 14
+font.weight : "light"
+text.color : "#ff2a00"
+font.family : "Liberation Serif"
+ytick.labelcolor : "#4d4d4d"
+ytick.labelsize : 18
+xtick.labelsize : 14
+ytick.labelright : False
