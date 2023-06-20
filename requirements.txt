@@ -5,3 +5,5 @@ seaborn
 geopandas
 pycountry
 streamlit
+plotly
+nbformat
