@@ -1,0 +1,21 @@
+axes.spines.right : False
+axes.spines.top : False 
+axes.spines.bottom : False
+axes.spines.left : False
+xtick.bottom : False
+xtick.labelbottom : True
+xtick.labelcolor : "#525252"
+ytick.left : False
+ytick.labelleft: False
+ytick.right : False
+ytick.labelright : False
+ytick.labelcolor : "#525252"
+legend.labelcolor : "#525252"
+ytick.major.right : False
+ytick.major.left : False
+ytick.minor.right : False
+ytick.minor.left : False
+font.size : 14
+font.weight : "light"
+text.color : "#ff2a00"
+font.family : "Liberation Serif"
