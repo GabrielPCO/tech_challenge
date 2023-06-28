@@ -7,3 +7,4 @@ pycountry
 streamlit
 plotly
 nbformat
+streamlit_lottie
