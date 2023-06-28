@@ -112,7 +112,9 @@ with tab0:
 
     Para tal, utilizamos dados públicos de um período de 15 anos (entre 2007 a 2021) fornecidos pela Empresa Brasileira de Pesquisa Agropecuária (Embrapa), orgão vinculado ao Ministério da Agricultura e Pecuária (Mapa), que foi criada em 1973 para desenvolver a base tecnológica de um modelo de agricultura e pecuária genuinamente tropical.
 
-    Os demais dados como os climáticos, demográficos, econômicos e etc, serão apontados ao longo deste documento e referenciados na última aba.
+    Foram avaliados nesse documento os dados de exportação exclusivamente de vinho de mesa (tinto, branco e rosado). No entando, a base também disponibiliza os dados de exportação de espumantes, uvas frescas e suco de uva.
+
+    Os demais dados como os climáticos, demográficos e econômicos serão apontados ao longo da análise, tendo sua fonte referenciada na última aba desse documento.
 
     A seguir, disponibilizamos os dados utilizados para a análise no momento da publicação deste documento, assim como um gráfico com a visão geral das análises realizadas.
 
@@ -146,7 +148,7 @@ with tab0:
 
 with tab1:
     '''
-    ## Maiores Consumidores da Vinícola:
+    ## Maiores Consumidores de Vinho do Estado do Rio Grande do Sul:
 
     A seguir, podemos verificar quais os países que mais consumiram litros de vinho dentro dos últimos 15 anos de exportações do estado do Rio Grande do Sul.
     '''
@@ -188,9 +190,9 @@ with tab1:
     st.divider()
     '''
 
-    ## Quantidade de Vinho Exportada x Valor em Dólares:
+    ## Quantidade de Vinho Exportada x Valor em Dólares (US$):
 
-    A seguir, podemos comparar a quantidade de litros de vinho e o valor de exportaração (em dólares) dos maiores consumidores de vinho dentro dos últimos 15 anos.
+    A seguir, podemos comparar a quantidade de litros de vinho e o valor de exportaração (em dólares US$) dos maiores consumidores de vinho dentro dos últimos 15 anos.
     '''
 
     # Adicionando imagem do Grafico
@@ -358,7 +360,7 @@ with tab5:
     fig_1.update_traces(hole=0.7, hoverinfo="label+percent+name")
 
     fig_1.update_layout(
-        title_text="Comparando as Exportações em Dólares com o PIB (2023) dos países top 10 em exportação de vinho",
+        title_text="Comparando as Exportações em Dólares (US$) com o PIB (US$ - valores atualizado em 2023) dos países top 10 em exportação de vinho",
         # Organizando as anotações no gra´fico.
         annotations=[dict(text='Exportações', x=0.165, y=0.5, font_size=20, showarrow=False),
                     dict(text='PIB', x=0.925, y=0.5, font_size=20, showarrow=False)])
