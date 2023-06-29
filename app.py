@@ -13,6 +13,17 @@ from plotly.subplots import make_subplots
 import streamlit as st
 from streamlit_lottie import st_lottie
 
+# Configurando a página
+st.set_page_config(
+    page_title="Tech-Challenge",
+    page_icon="🍷",
+    layout="centered",
+    initial_sidebar_state="auto",
+    menu_items={
+        'About': "Projeto criado para o *tech-challenge* do curso de pós-graduação da FIAP/Alura."
+    }
+)
+
 #Lendo a base de dados e tratanto a base de dados
 valor_futuro = pd.read_csv('Assets/DataFrames/valor_futuro.csv')
 economia_mundial = pd.read_csv('Assets/DataFrames/economia_mundial_merge.csv')
@@ -50,7 +61,7 @@ else:
 
 # Layout do aplicativo
 tab0, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Início",
-                                                                "Dados de Exportação", 
+                                                                "Exportação", 
                                                                 "Preço Médio", 
                                                                 "Clima", 
                                                                 "Demografia", 
@@ -65,6 +76,7 @@ with tab0:
     ## Análise de dados de Exportação Vinícola do Estado do Rio Grande do Sul
 
     '''
+    # Adicionando uma animação do Lottie (Imagem de garrafa e taça de vinho)
     st_lottie(url_json,
           # mudar direção da animação
           reverse=False,
@@ -124,9 +136,26 @@ with tab0:
 
     #### DataFrame de valores cumulativos dos últimos 15 anos de exportação vinícola do estado do Rio Grande do Sul, por país:
     '''
+
+    # Função do botão de Download para converter o DataFrame em .csv
+    @st.cache_data
+    def convert_df(df):
+        return df.to_csv().encode('utf-8')
+
+    # Convertendo o DataFrame em .csv
+    csv = convert_df(exportacoes_ultimos_15_anos)
+
     # Adicionando o DataFrame
     df = pd.DataFrame(exportacoes_ultimos_15_anos)
     st.dataframe(df,use_container_width=True)
+
+    # Botão de Download do DataFrame
+    st.download_button(
+        label="Download do CSV",
+        data=csv,
+        file_name='exportacoes_ultimos_15_anos.csv',
+        mime='text/csv',
+    )
 
     st.divider()
     '''
@@ -441,7 +470,13 @@ with tab7:
 
     A seguir, podemos verificar pelo gráfico de linhas o valor cumulativo em dólares de exportações futuras simulado para os próximos 5 anos no estado do Rio Grande do Sul.
     
-    Utilizamos o cálculo de valor futuro gerado pela fórmula VF=VP(1+i)n, onde, VF: Valor Futuro, VP: Valor Presente, i: Taxa de Crescimento e n: Período em anos.
+    Utilizamos o cálculo de valor futuro:
+    '''
+    st.latex(r'''
+    VF = VP(1+i) * n
+    ''')
+    ''' 
+    > *onde:  VF = Valor Futuro, VP = Valor Presente, i = Taxa de Crescimento e n = Período em anos.*
     
     Escolhemos 5 diferentes cenários de crecimento nas exportações, sendo eles: crescimento de 0%, 1%, 2%, 3% e 4% nos próximos 5 anos.
     
@@ -519,4 +554,6 @@ with tab8:
     3. List of countries by average yearly temperature. In: WIKIPÉDIA: a enciclopédia livre. [São Francisco, CA: Fundação Wikimedia], 2023. Disponível em: https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature. Acessado em: 28 de jun. 2023.
     
     4. List of countries by GDP (nominal). In: WIKIPÉDIA: a enciclopédia livre. [São Francisco, CA: Fundação Wikimedia], 2023. Disponível em: https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal). Acessado em: 28 de jun. 2023.
+
+    5. Matemática financeira. In: WIKIPÉDIA: a enciclopédia livre. [São Francisco, CA: Fundação Wikimedia], 2023. Disponível em: https://pt.wikipedia.org/wiki/Matem%C3%A1tica_financeira. Acessado em: 28 de jun. 2023.
     '''
