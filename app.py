@@ -60,15 +60,14 @@ else:
     print("Error in URL")
 
 # Layout do aplicativo
-tab0, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Início",
-                                                                "Exportação", 
-                                                                "Preço Médio", 
-                                                                "Clima", 
-                                                                "Demografia", 
-                                                                "Economia",
-                                                                "Ranking",
-                                                                "Prospecção Futura",
-                                                                "Referências"])
+tab0, tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["Início",
+                                                          "Exportação", 
+                                                          "Preço Médio", 
+                                                          "Fatores Externos",
+                                                          "Análise BI",
+                                                          "Ranking",
+                                                          "Prospecção Futura",
+                                                          "Referências"])
 
 # Separando as Tabs
 with tab0:
@@ -118,9 +117,9 @@ with tab0:
     
     ## Resumo:
 
-    Neste documento é apresentada uma análise econômica das exportações internacionais de vinho do Estado do Rio Grande do Sul. Cada aba do documento procura estudar uma faceta diferente dos dados de exportação a fim de reunir informações revelantes para a toma de decisão estratégica de uma empresa brasileira exportadora de vinhos.
+    Neste documento é apresentada uma análise econômica das exportações internacionais de vinho do Estado do Rio Grande do Sul. Cada aba do documento procura estudar uma faceta diferente dos dados de exportação a fim de reunir informações relevantes para a toma de decisão estratégica de uma empresa brasileira exportadora de vinhos.
 
-    Aqui serão apresentadas análises referentes aos dados gerais de exportação vinifera, uma visão geral da exportação internacional brasileira, o preço médio exercido na exportação de vinho em diferentes países, a interferência de variáveis como clima, demografia e economia sobre os dados de exportação, ranking dos maiores exportadores e um estudo de possíveis ações futuras para o êxito de uma empresa exportadora de vinhos brasileira.
+    Aqui serão apresentadas análises referentes aos dados gerais de exportação vinifera, uma visão geral da exportação internacional brasileira, o preço médio exercido na exportação de vinho em diferentes países, a interferência de variáveis como clima, demografia e economia sobre os dados de exportação, ranking dos maiores exportadores e um estudo de possíveis ações futuras para o êxito da empresa.
 
     Para tal, utilizamos dados públicos de um período de 15 anos (entre 2007 a 2021) fornecidos pela Empresa Brasileira de Pesquisa Agropecuária (Embrapa), orgão vinculado ao Ministério da Agricultura e Pecuária (Mapa), que foi criada em 1973 para desenvolver a base tecnológica de um modelo de agricultura e pecuária genuinamente tropical.
 
@@ -128,7 +127,7 @@ with tab0:
 
     Os demais dados como os climáticos, demográficos e econômicos serão apontados ao longo da análise, tendo sua fonte referenciada na última aba desse documento.
 
-    A seguir, disponibilizamos os dados utilizados para a análise no momento da publicação deste documento, assim como um gráfico com a visão geral das análises realizadas.
+    A seguir, disponibilizamos os dados utilizados para a análise no momento da publicação deste documento, assim como um quadro com a visão geral das análises gráficas realizadas.
 
     '''
     st.divider()
@@ -305,115 +304,130 @@ with tab2:
     
     Como uma estratégia para a empresa exportadora de vinhos, seria interessante focar na obtenção e exportação de vinhos de maior qualidade para países tais países visando o aumento do lucro de exportação pela venda de produtos por um maior preço médio.
     
-    A seguir, entraremos em fatores mais especificos como clima, demografia e economia dos principais países para os quais o estado exporta atualmente que podem influenciar diretamente na análise da exportação de vinho. 
+    A seguir, entraremos em fatores externos como clima, demografia e economia dos principais países para os quais o estado exporta atualmente que podem influenciar diretamente na análise da exportação de vinho. 
     '''
 
 with tab3:
     '''
-    ## Influência do Clima nas Exportações:
+    ## Fatores Externos que Podem Influenciar nas Exportações:
 
-    No gráfico a seguir, podemos observar a temperatura média em relação a quantidade de vinho exportado pelos países de maior exportação dos últimos 15 anos.
+    Nesta aba, são apresentados fatores distintos que podem influenciar a exportação internacional do vinho brasileiro.
+    Clique sobre o fator desejado para expandir.
     '''
-    graf_7 = plt.imread('Assets/Graficos/clima.png')
-    st.image(graf_7)
-    '''
-    ##### Fonte - List of countries by average yearly temperature. Wikipédia.
+    with st.expander("🌦️ Clima"):
+        '''
+        ## Influência do Clima nas Exportações:
 
-    ## Análise:
+        No gráfico a seguir, podemos observar a temperatura média em relação a quantidade de vinho exportado pelos países de maior exportação dos últimos 15 anos.
+        '''
+        graf_7 = plt.imread('Assets/Graficos/clima.png')
+        st.image(graf_7)
+        '''
+        ##### Fonte - List of countries by average yearly temperature. Wikipédia.
 
-    Pelo gráfico, podemos observar que é possível que a temperatura média de um país possa influenciar na quantidade de vinho exportada. Se observarmos, a Rússia é o país com menor temperatura média e maior exportação de litros de vinho. O Paraguai tembém tem uma das temperaturas médias mais discrepante entre os paises do top 10 e é um dos países de maior exportação. Um análise mais aprofundada e detalhada seria necessária para verificar se temperaturas mais extremas são correlacionadas diretamente a uma maior exportação de vinho.
-    '''
+        ## Análise:
 
-    st.divider()
+        Pelo gráfico, podemos observar que é possível que a temperatura média de um país possa influenciar na quantidade de vinho exportada. Se observarmos, a Rússia é o país com menor temperatura média e maior exportação de litros de vinho. O Paraguai tembém tem uma das temperaturas médias mais discrepante entre os paises do top 10 e é um dos países de maior exportação. Um análise mais aprofundada e detalhada seria necessária para verificar se temperaturas mais extremas são correlacionadas diretamente a uma maior exportação de vinho.
+        '''
 
-    '''
+        st.divider()
 
-    ## Conclusão:
+        '''
 
-    Pela análise, é possível que a temperatura tenha uma influencia na quantidade de vinho exportada. Dois dos maiores consumidores de vinho do estado possuem as média de temperatura mais extremas entre os países do top de exportação.
-    
-    Seria interessante que a empresa exportadora levasse em conta o clima dos países para o qual irá exportar seus vinhos. Países com clima mais extremos podem apresentar um maior retorno nas vendas da empresa.
-    
-    Além disso, o tipo de vinho exportado deve levar em conta se o país do cliente alvo apresenta altas ou baixas temperatura, pois diferentes tipos de vinhos, suas respectivas uvas e características como acidez, aroma e sabor podem ser alterados pelo clima local.
-    
-    Vinho como o Pinot Noir (tinto) e Chardonnay (branco) são ótimos para climas mais quentes, enquanto Malbec (tinto) é um candidato para climas mais frios.
-    '''
+        ## Conclusão:
 
+        Pela análise, é possível que a temperatura tenha uma influencia na quantidade de vinho exportada. Dois dos maiores consumidores de vinho do estado possuem as média de temperatura mais extremas entre os países do top de exportação.
+        
+        Seria interessante que a empresa exportadora levasse em conta o clima dos países para o qual irá exportar seus vinhos. Países com clima mais extremos podem apresentar um maior retorno nas vendas da empresa.
+        
+        Além disso, o tipo de vinho exportado deve levar em conta se o país do cliente alvo apresenta altas ou baixas temperatura, pois diferentes tipos de vinhos, suas respectivas uvas e características como acidez, aroma e sabor podem ser alterados pelo clima local.
+        
+        Vinho como o Pinot Noir (tinto) e Chardonnay (branco) são ótimos para climas mais quentes, enquanto Malbec (tinto) é um candidato para climas mais frios.
+        
+        '''
+    with st.expander("🌎 Demografia"):
+        '''
+
+        ## Demografia das Exportações:
+
+        A seguir, podemos comparar o valor de exportaração (em dólares) e o tamanho da população dos maiores consumidores da vinícola.
+        '''
+
+        # Adicionando imagem do Grafico
+        graf_8 = plt.imread('Assets/Graficos/demografia_bidirecional.png')
+        st.image(graf_8)
+
+        '''
+        ##### Fonte - Lista de países por população. Wikipédia.
+
+        ## Análise: 
+        
+        Pelo gráfico, podemos observar que aparentemente há pouca ou nenhuma correlação entre o tamanho da população e a quantidade de dólares em vinho exportada internacionalmente. Podemos observar inclusive que países com população relativamente pequena comparada em relação aos demais (como o Paraguai) apresentam volumes expressivos de exportação de vinho do estado.
+        
+        '''
+        st.divider()
+        '''
+
+        ## Conclusão:
+
+        Pela análise, em um primeiro momento, a população de um pais não é necessariamente uma variável que ditará a quantidade de vinho que o mesmo irá demandar.
+        
+        Países demograficamente menos exprecivos ainda sim podem ser grandes consumidores de vinho e inclusive fazer parte dos maiores consumidores do produto.
+        
+        Fatores como a proximidade geográfica, o clima e a cultura local podem ser muito mais decisivos em termos de quantidade exportada de vinho do que a população local de um determinado pais.
+        
+        Para a empresa exportadora de vinhos, talvez não seja tão produtivo focar exclusivamente no tamanho da população do pais para a qual ela irá exportar, pois existem outros fatores de maior influência sobre o consumo de vinho pelos países analisados.
+        
+        '''
+    with st.expander("💵 Economia"):
+        '''
+        
+        ## Economia Global x Exportação:
+
+        A seguir, podemos comparar pelo gráfico de rosca o valor de exportação dos últimos 15 anos com o PIB de cada um dos países com maior consumo de vinho.
+        '''
+        #Donut
+        fig_1 = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
+        fig_1.add_trace(go.Pie(labels=economia_mundial['paises'], values=economia_mundial['valor_em_us'], name="Exportações"),
+                    1, 1)
+        fig_1.add_trace(go.Pie(labels=economia_mundial['paises'], values=economia_mundial['pib'], name="PIB"),
+                    1, 2)
+
+        # Tamanho do buraco da rosca
+        fig_1.update_traces(hole=0.7, hoverinfo="label+percent+name")
+
+        fig_1.update_layout(
+            title_text="Comparando as Exportações em Dólares (US$) com o PIB (US$ - valores atualizado em 2023) dos países top 10 em exportação de vinho",
+            # Organizando as anotações no gra´fico.
+            annotations=[dict(text='Exportações', x=0.165, y=0.5, font_size=20, showarrow=False),
+                        dict(text='PIB', x=0.925, y=0.5, font_size=20, showarrow=False)])
+        
+        st.plotly_chart(fig_1,  use_container_width = True)
+        '''
+        ##### Fonte - List of countries by GDP (nominal). Wikipédia.
+
+        ## Análise:
+
+        pelos gráficos, podemos observar que países com grande volume de importações em dólares nem sempre são os países que possuem o maior PIB em relação aos demais. Por exemplo, Paraguai é o maior importador em termos de valores em dólares, mas ao mesmo tempo ele é o país com o menor PIB (Produto Interno Bruto) dentre os demais.
+        
+        No entanto, muito dos países dentre os maiores consumidores de vinho do estado são desenvolvidos e possuem um PIB consideravel. Isso pode indicar que a capacidade econômica de uma nação tem sim uma influência direta no poder aquisitivo de produtos como o vinho brasileiro.
+        
+        '''
+        st.divider()
+        '''
+
+        ## Conclusão:
+
+        Pela análise, é possível inferir que o PIB é um fator que deve ser considerado importânte na decisão de estratégia da empresa. Nem sempre os países de maior poder econômico serão os maiores consumidores, porém a chance de um deles ser um grande consumidor é muito elevada.
+        '''
 with tab4:
     '''
-    ## Demografia das Exportações:
+        ## Análise BI:
 
-    A seguir, podemos comparar o valor de exportaração (em dólares) e o tamanho da população dos maiores consumidores da vinícola.
+        A seguir, podemos verificar uma análise mais aprofundada dos dados.
     '''
-
-    # Adicionando imagem do Grafico
-    graf_8 = plt.imread('Assets/Graficos/demografia_bidirecional.png')
-    st.image(graf_8)
-
-    '''
-    ##### Fonte - Lista de países por população. Wikipédia.
-
-    ## Análise: 
-    
-    Pelo gráfico, podemos observar que aparentemente há pouca ou nenhuma correlação entre o tamanho da população e a quantidade de dólares em vinho exportada internacionalmente. Podemos observar inclusive que países com população relativamente pequena comparada em relação aos demais (como o Paraguai) apresentam volumes expressivos de exportação de vinho do estado.
-    
-    '''
-    st.divider()
-    '''
-
-    ## Conclusão:
-
-    Pela análise, em um primeiro momento, a população de um pais não é necessariamente uma variável que ditará a quantidade de vinho que o mesmo irá demandar.
-    
-    Países demograficamente menos exprecivos ainda sim podem ser grandes consumidores de vinho e inclusive fazer parte dos maiores consumidores do produto.
-    
-    Fatores como a proximidade geográfica, o clima e a cultura local podem ser muito mais decisivos em termos de quantidade exportada de vinho do que a população local de um determinado pais.
-    
-    Para a empresa exportadora de vinhos, talvez não seja tão produtivo focar exclusivamente no tamanho da população do pais para a qual ela irá exportar, pois existem outros fatores de maior influência sobre o consumo de vinho pelos países analisados.
-    '''
-
+    st.markdown('<iframe width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNTg1ZjY5NzgtMDAxMS00MDMyLTlmZGMtNDIzZDRmODIzYjM4IiwidCI6IjgxYTI4ZjEwLWUxYTEtNGJmNi04N2FlLWY1MDQ1ZTE0NjBjMCJ9" frameborder="0" allowFullScreen="true"></iframe>',unsafe_allow_html=True)
 with tab5:
-    '''
-    ## Economia Global x Exportação:
-
-    A seguir, podemos comparar pelo gráfico de rosca o valor de exportação dos últimos 15 anos com o PIB de cada um dos países com maior consumo de vinho.
-    '''
-    #Donut
-    fig_1 = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
-    fig_1.add_trace(go.Pie(labels=economia_mundial['paises'], values=economia_mundial['valor_em_us'], name="Exportações"),
-                1, 1)
-    fig_1.add_trace(go.Pie(labels=economia_mundial['paises'], values=economia_mundial['pib'], name="PIB"),
-                1, 2)
-
-    # Tamanho do buraco da rosca
-    fig_1.update_traces(hole=0.7, hoverinfo="label+percent+name")
-
-    fig_1.update_layout(
-        title_text="Comparando as Exportações em Dólares (US$) com o PIB (US$ - valores atualizado em 2023) dos países top 10 em exportação de vinho",
-        # Organizando as anotações no gra´fico.
-        annotations=[dict(text='Exportações', x=0.165, y=0.5, font_size=20, showarrow=False),
-                    dict(text='PIB', x=0.925, y=0.5, font_size=20, showarrow=False)])
-    
-    st.plotly_chart(fig_1,  use_container_width = True)
-    '''
-    ##### Fonte - List of countries by GDP (nominal). Wikipédia.
-
-    ## Análise:
-
-    pelos gráficos, podemos observar que países com grande volume de importações em dólares nem sempre são os países que possuem o maior PIB em relação aos demais. Por exemplo, Paraguai é o maior importador em termos de valores em dólares, mas ao mesmo tempo ele é o país com o menor PIB (Produto Interno Bruto) dentre os demais.
-    
-    No entanto, muito dos países dentre os maiores consumidores de vinho do estado são desenvolvidos e possuem um PIB consideravel. Isso pode indicar que a capacidade econômica de uma nação tem sim uma influência direta no poder aquisitivo de produtos como o vinho brasileiro.
-    
-    '''
-    st.divider()
-    '''
-
-    ## Conclusão:
-
-    Pela análise, é possível inferir que o PIB é um fator que deve ser considerado importânte na decisão de estratégia da empresa. Nem sempre os países de maior poder econômico serão os maiores consumidores, porém a chance de um deles ser um grande consumidor é muito elevada.
-    '''
-
-with tab6:
     '''
     ## Ranking de Exportações ao Longo dos Anos:
 
@@ -464,7 +478,7 @@ with tab6:
     Como estratégia para a empresa, seria interessante focar seus esforços para se adequar ao mercado de vinhos Europeu no momento atual. Além disso, a empresa deve se preparar para futuramente atender um mercado mais amplo, levando em conta países de outros continenteas como o Haiti, Paraguai e China que vem apresentando um aumento em suas demandas pelo produto.
     '''
 
-with tab7:
+with tab6:
     '''
     ## Prospecções Futuras:
 
@@ -543,7 +557,7 @@ with tab7:
     Já em um cenário de maior crescimento das exportações, seria interessante expandir o leque de clientes da empresa, englobando países de crescente demanda de importação de vinhos como os Estados Unidos, Paraguai, Haiti e a China.
     '''
 
-with tab8:
+with tab7:
     '''
     ## Referências: 
     
