@@ -184,9 +184,32 @@ with tab1:
                                   "🍷Preço Médio do Vinho"])
         with tab1_0:
             '''
+            ## Total de exportações na série histórica de 1970 a 2021
+            Através do gráfico abaixo, é possível visualizar a evolução do montante total de litros de vinho exportados pelo Rio Grande do Sul para o mundo. 
+            
+            '''
+
+            #Adicionando imagem do Grafico
+            graf_1970_2021 = plt.imread('Assets/Graficos/areaplot_exportacoes_ano_a_ano_acumulado.png')
+            st.image(graf_1970_2021)
+
+            '''
+            ##### Fonte - Banco de dados de uva, vinho e derivados. Embrapa.
+            ##### Fonte Indireta - CACEX e DECEX/C.T.I.C..
+
+            ## Análise:
+
+            A partir da inclinação da curva, nota-se um grande aumento nas exportações a partir da década de 1990, tendência que se repetiu nos anos 2010 após uma pequena redução na década de 2000. Isto indica um comportamento cíclico no total de vinho exportado pelo RS.
+
+            Para as próximas análises, será utilizado um recorte dos últimos 15 anos da série histórica (2007-2021), como foi indicado pela barra vertical no gráfico acima.
+
+            '''
+            st.divider()
+            '''
+
             ## Maiores Consumidores de Vinho do Estado do Rio Grande do Sul:
 
-            A seguir, podemos verificar quais os países que mais consumiram litros de vinho dentro dos últimos 15 anos de exportações do estado do Rio Grande do Sul.
+            A seguir, pode-se verificar quais os países que mais consumiram litros de vinho dentro dos últimos 15 anos de exportações do estado do Rio Grande do Sul.
             '''
             
             # Adicionando imagem do Grafico
@@ -199,7 +222,7 @@ with tab1:
 
             ## Análise: 
             
-            Pelo gráfico podemos notar que o pais que mais importa quantidade de vinhos em litro é a Rússia, seguida do Paraguai que também apresenta um valor significativo de exportação. Cada um dos demais países do top 10 exportam algo em torno de 1 a 3 milhões de litros e estão mais próximos em termos de comparação.
+            É possível notar que o maior importador em quantidade de vinhos em litro é a Rússia, seguida do Paraguai que também apresenta um valor significativo de importação. Cada um dos demais países do top 10 importam algo em torno de 1 a 3 milhões de litros e estão mais próximos em termos de comparação.
 
             '''
             st.divider()
@@ -207,7 +230,7 @@ with tab1:
 
             ## Maiores Exportações de Vinho em Dólares:
 
-            A seguir, podemos verificar quais os países apresentam maior valor (em dólares) em termos de exportação de vinho dentro dos últimos 15 anos das exportações do estado do Rio Grande do Sul.
+            A seguir, osberva-se quais os países apresentam maior valor (em dólares) em termos de compra de vinho do Rio Grande do Sul dentro dos últimos 15 anos.
             '''
 
             # Adicionando imagem do Grafico
@@ -220,7 +243,7 @@ with tab1:
 
             ## Análise: 
             
-            Pelo gráfico, podemos observar que o Paraguai apresenta o maior valor de exportação em dólares. Outros dois países que tem um valor significativo de exportação são Rússia e Estados Unidos.
+            De acordo com o gráfico, o Paraguai é o maior comprador em termos de valor em dólares. Outros dois países têm um valor significativo neste sentido: Rússia e Estados Unidos.
             
             '''
             st.divider()
@@ -228,7 +251,7 @@ with tab1:
 
             ## Quantidade de Vinho Exportada x Valor em Dólares (US$):
 
-            A seguir, podemos comparar a quantidade de litros de vinho e o valor de exportaração (em dólares US$) dos maiores consumidores de vinho dentro dos últimos 15 anos.
+            Através do gráfico abaixo, é possível comparar a quantidade de litros de vinho e o valor de exportaração (em dólares US$) dos maiores consumidores de vinho dentro dos últimos 15 anos.
             '''
 
             # Adicionando imagem do Grafico
@@ -241,16 +264,37 @@ with tab1:
 
             ## Análise: 
             
-            Apesar do Paraguai ser o segundo maior pais para o qual o estado exporta em termos absolutos de litros de vinho, ele é o pais com o maior valor de exportação em dólares. Isso pode ocorrer por diversos fatores, sendo um deles que o Paraguai importa maior quantidade de vinhos de alta qualidade (vinhos premium com maior preço médio).
+            Apesar do Paraguai ser o segundo maior pais para o qual o Rio Grande do Sul exporta em termos absolutos de litros de vinho, ele é o pais com o maior valor de exportação em dólares. Isso pode ocorrer por diversos fatores, sendo um deles que o Paraguai importa maior quantidade de vinhos de alta qualidade (vinhos premium com maior preço médio).
             
+            '''
+            st.divider()
+            '''
+            ## Exportações ano a ano por país de destino
+
+            Além do montante total acumulado dos últimos 15 anos, informações importantes podem ser obtidas do total exportado por ano em cada um dos 10 principais países importadores de vinho gaúcho, como mostra o gráfico abaixo.
+            '''
+            # Adicionando imagem do Grafico
+            graf_exp_ano_ano = plt.imread('Assets/Graficos/top10_lineplot_exportacoes_ano_a_ano.png')
+            st.image(graf_exp_ano_ano)
+
+            '''
+            ##### Fonte - Banco de dados de uva, vinho e derivados. Embrapa.
+            ##### Fonte Indireta - CACEX e DECEX/C.T.I.C..
+
+            ## Análise:
+
+            O gráfico de linhas mostra que os dois países para o qual o RS mais exporta vinho possuem comportamentos muito diferentes nos últimos 15 anos. A Rússia é bastante inconstante, com alguns anos comprando quantidades muito grandes de vinho, seguidos de outros períodos em que praticamente não compra a bebida do RS. Possivelmente a Rússia apenas fecha negociações nos momentos mais favoráveis para o país ou então adota a prática de estocar vinhos para anos seguintes.
+
+            Já as exportações para o Paraguai vem aumento ano após ano, resultando em uma curva muito mais constante. Pode indicar que o Rio Grande do Sul conquistou o mercado paraguaio e cada vez mais mantém uma relação comercial mais próxima.
+
             '''
             st.divider()
             '''
             ## Conclusão:
 
-            A análise dos dados apresentados nos gráficos a cima indicam que há uma disparidade entre a quantidade de litros de vinho exportado e o valor de exportação do mesmo em diferêntes países.
+            A análise dos dados apresentados nos gráficos acima indicam que há uma disparidade entre a quantidade de litros de vinho exportado e o valor de exportação do mesmo em diferentes países.
             
-            Essa disparidade pode ocorrer por diversos fatores, sendo um deles a diferença do preço médio de vinho exportado para diferentes países.
+            Essa variação pode ocorrer por uma série de fatores, sendo um deles a diferença do preço médio de vinho exportado para diferentes países.
             
             Outros fatores que podem influenciar nas exportações são: clima, demografia e economia dos diversos países para qual o estado exporta atualmente.
             
@@ -260,9 +304,9 @@ with tab1:
             '''
             ## Preço Médio do Vinho:
 
-            Aqui, foi feito um estudo sobre o preço do vinho exportado internacionalmente.
+            Nesta seção, tem-se uma visão do preço médio do litro de vinho exportado para cada país
             
-            No gráfico a seguir, podemos observar os 10 países com maior preço médio do litro de vinho exportado pelo estado.
+            No gráfico a seguir, estão evidenciados os 10 países com os maiores valores de preço médio do litro de vinho.
             '''
             graf_5 = plt.imread('Assets/Graficos/preco_medio_bar.png')
             st.image(graf_5)
@@ -282,7 +326,7 @@ with tab1:
 
             ## Preço Médio e Total de Litros Exportados:
 
-            Neste gráfico, vemos uma comparação do preço médio e o total de litros de vinho exportado para todos os demais países da análise.
+            Neste gráfico, é apresentada uma comparação do preço médio e o total de litros de vinho exportado para todos os demais países da análise.
             '''
 
             graf_6 = plt.imread('Assets/Graficos/preco_medio_scat.png')
@@ -296,7 +340,7 @@ with tab1:
 
             Através desse gráfico, é possível ter mais indícios sobre a tendência das váriáveis preço médio do litro e total de litros exportados. Essas variáveis aparentam conter uma proporcionalidade inversa, possívelmente pelo fato da comercialização de grandes quantidades do produto tenderem a baratear o custo do litro de vinho.
             
-            Entretanto, vemos algumas exceções como os Estado Unidos, Países Baixos e Reino Unido, que possuem grande volume de compra e um preço médio do litro mais elevado quando comparados aos outros países desta análise.
+            Entretanto, existem algumas exceções como os Estado Unidos, Países Baixos e Reino Unido, que possuem grande volume de compra e um preço médio do litro mais elevado quando comparados aos outros países desta análise.
             
             Outro fator determinante que apontam a relação dessas duas variáveis é o fato de que se pode observar que os maiores preços médios do litro de vinho correspondem a países desenvolvidos economicamente, principalmente do continente europeu. Uma das intepretações possíveis é que tais países têm maior poder de compra e por isso o Brasil consegue praticar um preço mais vantajoso nas negociações, por outro lado isso também pode indicar que são mercados mais exigentes e compram apenas os vinhos de maior qualidade.
             
@@ -307,11 +351,11 @@ with tab1:
 
             ## Conclusão:
 
-            Pela análise, concluímos que países com maior desenvolvimento econômico e países do continente europeu possuem maiores preços médios do litro do vinho. Ao mesmo tempo, esses países podem apresentar uma maior exigência da qualidade dos produtos que serão exportados.
+            Pela análise, conclui-se que países com maior desenvolvimento econômico e países do continente europeu possuem maiores preços médios do litro do vinho. Ao mesmo tempo, esses países podem apresentar uma maior exigência da qualidade dos produtos que serão exportados.
             
             Como uma estratégia para a empresa exportadora de vinhos, seria interessante focar na obtenção e exportação de vinhos de maior qualidade para países tais países visando o aumento do lucro de exportação pela venda de produtos por um maior preço médio.
             
-            A seguir, entraremos em fatores externos como clima, demografia e economia dos principais países para os quais o estado exporta atualmente que podem influenciar diretamente na análise da exportação de vinho. 
+            A seguir, serão abordados fatores externos como clima, demografia e economia dos principais países para os quais o estado exporta atualmente que podem influenciar diretamente na análise da exportação de vinho. 
             '''
 
 with tab2:
@@ -324,9 +368,50 @@ with tab2:
                                       "💵Economia"])
     with tab2_0:
         '''
-        ## Influência do Clima nas Exportações:
+        ## Exportações de vinho e temperatura média anual
 
-        No gráfico a seguir, podemos observar a temperatura média em relação a quantidade de vinho exportado pelos países de maior exportação dos últimos 15 anos.
+        Geralmente, é comum a associação entre clima frio e o consumo de vinho. No Brasil, por exemplo, as vendas de vinho no inverno aumentam drasticamente: https://www.cnnbrasil.com.br/viagemegastronomia/insiders/voce-provavelmente-esta-bebendo-mais-vinho-mas-sabe-por-que/
+
+        Seguindo essa lógica, países com temperaturas mais baixas possivelmente consomem mais vinho do que países mais quentes. Abaixo vemos um gráfico que relaciona a temperatura média anual de países para o qual o RS exportou vinho e a quantidade de vinho exportada nos últimos 15 anos.
+        '''
+        graf_temp_exportacao = plt.imread('Assets/Graficos/lmplot_litros_exportados_temperatura_media.png')
+        st.image(graf_temp_exportacao)
+
+        '''
+        ##### Fonte - List of countries by average yearly temperature. Wikipédia.
+        ##### Fonte - Banco de dados de uva, vinho e derivados. Embrapa.
+        ##### Fonte Indireta - CACEX e DECEX/C.T.I.C..
+
+        # Análise:
+
+        De acordo com o gráfico, os dados da Embrapa Uva e Vinho e os dados climátcos de cada país sugerem uma correlação negativa entre as variáveis de temperatura média anual do país e o total de vinho importado do Brasil, isto é, há uma tendência dos países de clima mais quente comprarem menos vinho do Brasil em quantidade absoluta.
+
+        Como forma de explorar mais a fundo esta hipótese, também é necessário ponderar o peso demográfico no consumo destes países, pois o tamanho da população de cada país é um fator determinante no consumo absoluto de vinho.
+        '''    
+        st.divider()
+        '''
+        ## Exportações de vinho per capita e temperatura média anual
+
+        Como forma de ponderar o tamanho da população de cada país, o gráfico abaixo relaciona o consumo de vinho per capita e a quantidade de vinho exportada nos últimos 15 anos.
+        '''
+        graf_temp_exportacao_per_capita = plt.imread('Assets/Graficos/lmplot_litros_exportados_per_capita_temperatura_media.png')
+        st.image(graf_temp_exportacao_per_capita)
+        '''
+        ##### Fonte - List of countries by average yearly temperature. Wikipédia.
+        ##### Fonte - Banco de dados de uva, vinho e derivados. Embrapa.
+        ##### Fonte Indireta - CACEX e DECEX/C.T.I.C..
+
+        # Análise:
+
+        Neste segundo gráfico, abordando o consumo de vinho relativo ao tamanho da população, vê-se que praticamente não há correlação entre baixas temperaturas e um maior consumo de vinho de acordo com os dados de exportação da Embrapa Uva e Vinho.
+
+        É possível observar que na verdade os maiores valores de litros de vinho por habitante são de países com clima muito quente, como o Paraguai, Haiti e Curação. Portanto, apesar da temperatura média anual parecer ter um impacto quando se olha os valores absolutos de vinho importado do Brasil, é preciso ter cautela ao associar as duas variáveis de maneira direta, outros fatores como a economia e a cultura de cada país podem ser mais influentes nesse sentido.
+        '''
+        st.divider()
+        '''
+        ## Influência dos aspectos climáticos nos países com maiores exportações:
+
+        Por fim, no gráfico a seguir estão destacados os 10 principais países compradores de vinho do RS e como a temperatura média anual destes países varia.
         '''
         graf_7 = plt.imread('Assets/Graficos/clima.png')
         st.image(graf_7)
@@ -335,7 +420,7 @@ with tab2:
 
         ## Análise:
 
-        Pelo gráfico, podemos observar que é possível que a temperatura média de um país possa influenciar na quantidade de vinho exportada. Se observarmos, a Rússia é o país com menor temperatura média e maior exportação de litros de vinho. O Paraguai tembém tem uma das temperaturas médias mais discrepante entre os paises do top 10 e é um dos países de maior exportação. Um análise mais aprofundada e detalhada seria necessária para verificar se temperaturas mais extremas são correlacionadas diretamente a uma maior exportação de vinho.
+        Pelo gráfico, nota-se que a temperatura média de um país pode estar relacionada à quantidade de vinho exportada. Se observarmos, a Rússia é o país com menor temperatura média e maior exportação de litros de vinho. Além disso, 8 dos 10 países possuem temperatura média anual abaixo dos 13ºC. Por outro laod, o Paraguai tembém tem uma das temperaturas médias mais discrepante entre os paises do top 10 e é um dos países de maior exportação. Um análise mais aprofundada e detalhada seria necessária para verificar se temperaturas mais extremas são correlacionadas diretamente a uma maior exportação de vinho.
         '''
 
         st.divider()
@@ -344,13 +429,15 @@ with tab2:
 
         ## Conclusão:
 
-        Pela análise, é possível que a temperatura tenha uma influencia na quantidade de vinho exportada. Dois dos maiores consumidores de vinho do estado possuem as média de temperatura mais extremas entre os países do top de exportação.
+        De acordo com os dados, é possível que a temperatura tenha uma influência na quantidade de vinho exportada. Dois dos maiores consumidores de vinho do estado possuem as média de temperatura mais extremas entre os países do top de exportação.
         
         Seria interessante que a empresa exportadora levasse em conta o clima dos países para o qual irá exportar seus vinhos. Países com clima mais extremos podem apresentar um maior retorno nas vendas da empresa.
         
         Além disso, o tipo de vinho exportado deve levar em conta se o país do cliente alvo apresenta altas ou baixas temperatura, pois diferentes tipos de vinhos, suas respectivas uvas e características como acidez, aroma e sabor podem ser alterados pelo clima local.
         
         Vinho como o Pinot Noir (tinto) e Chardonnay (branco) são ótimos para climas mais quentes, enquanto Malbec (tinto) é um candidato para climas mais frios.
+
+        Entretanto, associar tais variáveis de maneira direta não parece o correto, fatores como cultura e economia também devem ser levados em conta no momento de definir os países alvo.
         
         '''
     with tab2_1:
@@ -358,7 +445,7 @@ with tab2:
 
         ## Demografia das Exportações:
 
-        A seguir, podemos comparar o valor de exportaração (em dólares) e o tamanho da população dos maiores consumidores da vinícola.
+        A seguir, são comparados o valor de exportaração (em dólares) e o tamanho da população dos maiores consumidores da vinícola.
         '''
 
         # Adicionando imagem do Grafico
@@ -370,7 +457,7 @@ with tab2:
 
         ## Análise: 
         
-        Pelo gráfico, podemos observar que aparentemente há pouca ou nenhuma correlação entre o tamanho da população e a quantidade de dólares em vinho exportada internacionalmente. Podemos observar inclusive que países com população relativamente pequena comparada em relação aos demais (como o Paraguai) apresentam volumes expressivos de exportação de vinho do estado.
+        Observa-se que aparentemente há pouca ou nenhuma correlação entre o tamanho da população e a quantidade de dólares em vinho exportada internacionalmente. Inclusive, países com população relativamente pequena em relação aos demais (como o Paraguai) apresentam volumes expressivos de exportação de vinho do estado.
         
         '''
         st.divider()
@@ -378,9 +465,9 @@ with tab2:
 
         ## Conclusão:
 
-        Pela análise, em um primeiro momento, a população de um pais não é necessariamente uma variável que ditará a quantidade de vinho que o mesmo irá demandar.
+        Eum primeiro momento, a população de um pais não é necessariamente uma variável que ditará a quantidade de vinho que o mesmo irá demandar.
         
-        Países demograficamente menos exprecivos ainda sim podem ser grandes consumidores de vinho e inclusive fazer parte dos maiores consumidores do produto.
+        Países demograficamente menos expressivos ainda sim podem ser grandes consumidores de vinho e inclusive fazer parte dos maiores consumidores do produto.
         
         Fatores como a proximidade geográfica, o clima e a cultura local podem ser muito mais decisivos em termos de quantidade exportada de vinho do que a população local de um determinado pais.
         
@@ -392,7 +479,7 @@ with tab2:
         
         ## Economia Global x Exportação:
 
-        A seguir, podemos comparar pelo gráfico de rosca o valor de exportação dos últimos 15 anos com o PIB de cada um dos países com maior consumo de vinho.
+        A seguir, é possivel comparar pelo gráfico de rosca o valor de exportação dos últimos 15 anos com o PIB de cada um dos países com maior consumo de vinho.
         '''
         #Donut
         fig_1 = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
@@ -416,7 +503,7 @@ with tab2:
 
         ## Análise:
 
-        pelos gráficos, podemos observar que países com grande volume de importações em dólares nem sempre são os países que possuem o maior PIB em relação aos demais. Por exemplo, Paraguai é o maior importador em termos de valores em dólares, mas ao mesmo tempo ele é o país com o menor PIB (Produto Interno Bruto) dentre os demais.
+        Os dados indicam que países com grande volume de importações em dólares nem sempre são os países que possuem o maior PIB em relação aos demais. Por exemplo, Paraguai é o maior importador em termos de valores em dólares, mas ao mesmo tempo ele é o país com o menor PIB (Produto Interno Bruto) dentre os demais.
         
         No entanto, muito dos países dentre os maiores consumidores de vinho do estado são desenvolvidos e possuem um PIB consideravel. Isso pode indicar que a capacidade econômica de uma nação tem sim uma influência direta no poder aquisitivo de produtos como o vinho brasileiro.
         
@@ -426,7 +513,7 @@ with tab2:
 
         ## Conclusão:
 
-        Pela análise, é possível inferir que o PIB é um fator que deve ser considerado importânte na decisão de estratégia da empresa. Nem sempre os países de maior poder econômico serão os maiores consumidores, porém a chance de um deles ser um grande consumidor é muito elevada.
+        É possível inferir que o PIB é um fator que deve ser considerado importânte na decisão de estratégia da empresa. Nem sempre os países de maior poder econômico serão os maiores consumidores, porém a chance de um deles ser um grande consumidor é muito elevada.
         '''
 
 with tab3:
