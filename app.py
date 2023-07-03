@@ -533,15 +533,22 @@ with tab3:
         ## Análise:
 
         Analisando os países com maior valor gasto com importações de vinhos temos o cenário abaixo:
-            •	Paraguai: Teve um aumento de 85% nas importação de vinho ao longo do período;
-            •	Rússia: Apresentou um pico em 2013 e, a partir dali uma queda de -98%;
-            •	Estados Unidos: Notamos que vem em uma média constante, porém em 2021 houve uma redução na importação de -67%;
-            •	Reino unido: notamos uma forte oscilação da importação ano a ano durante o período apurado;
-            •	China: analisando o histórico podemos perceber que em 2009 tivemos um aumento de 1761% para importação desde então mantem com uma mediana de US$ 279.956;
-            •	Países Baixos: analisando o histórico notamos que está em queda constante a cada ano, chegando em importar em 2021 apenas US$ 8.000.
+
+            Paraguai: Teve um aumento de 85% nas importação de vinho ao longo do período;
+        
+            Rússia: Apresentou um pico em 2013 e, a partir dali uma queda de -98%;
+        
+            Estados Unidos: Notamos que vem em uma média constante, porém em 2021 houve uma redução na importação de -67%;
+        
+            Reino unido: notamos uma forte oscilação da importação ano a ano durante o período apurado;
+        
+            China: analisando o histórico podemos perceber que em 2009 tivemos um aumento de 1761% para importação desde então mantem com uma mediana de US$ 279.956;
+        
+            Países Baixos: analisando o histórico notamos que está em queda constante a cada ano, chegando em importar em 2021 apenas US$ 8.000.
 
         Analisando o pico de 23M de 2013:
-            •	Notamos que a Rússia teve uma participação de 15M considerando assim um outlier para essa análise.
+
+            Notamos que a Rússia teve uma participação de 15M considerando assim um outlier para essa análise.
 
         ## Conclusão:
 
