@@ -134,7 +134,7 @@ with tab0:
     st.divider()
     '''
 
-    #### DataFrame de valores cumulativos dos últimos 15 anos de exportação vinícola do estado do Rio Grande do Sul, por país:
+    #### DataFrame de valores cumulativos dos últimos 15 anos de exportação vinícola do estado do Rio Grande do Sul, por país
     '''
 
     # Função do botão de Download para converter o DataFrame em .csv
@@ -160,7 +160,7 @@ with tab0:
     st.divider()
     '''
 
-    #### Visão geral das exportações do Estado do Rio Grande do Sul:
+    #### Visão geral das exportações do Estado do Rio Grande do Sul
     '''
 
     # Adicionando imagem do Grafico
@@ -178,14 +178,14 @@ with tab0:
 with tab1:
     with st.container():
         '''
-        ## Dados da Vitivinicultura do Estado do Rio Grande do Sul:
+        ## Dados da Vitivinicultura do Estado do Rio Grande do Sul
 
         '''
         tab1_0, tab1_1 = st.tabs(["🚛Exportacao",
                                   "🍷Preço Médio do Vinho"])
         with tab1_0:
             '''
-            ## Total de exportações na série histórica de 1970 a 2021:
+            ## Total de exportações na série histórica de 1970 a 2021
             Através do gráfico abaixo, é possível visualizar a evolução do montante total de litros de vinho exportados pelo Rio Grande do Sul para o mundo. 
             
             '''
@@ -208,7 +208,7 @@ with tab1:
             st.divider()
             '''
 
-            ## Maiores consumidores de vinho do Estado do Rio Grande do Sul:
+            ## Maiores consumidores de vinho do Estado do Rio Grande do Sul
 
             A seguir, pode-se verificar quais os países que mais consumiram litros de vinho dentro dos últimos 15 anos de exportações do estado do Rio Grande do Sul.
             '''
@@ -229,7 +229,7 @@ with tab1:
             st.divider()
             '''
 
-            ## Maiores exportações de vinho em dólares:
+            ## Maiores exportações de vinho em dólares
 
             A seguir, observa-se quais os países apresentam maior valor (em dólares) em termos de compra de vinho do Rio Grande do Sul dentro dos últimos 15 anos.
             '''
@@ -250,7 +250,7 @@ with tab1:
             st.divider()
             '''
 
-            ## Quantidade de vinho exportada x valor em dólares (US$):
+            ## Quantidade de vinho exportada x valor em dólares (US$)
 
             Através do gráfico abaixo, é possível comparar a quantidade de litros de vinho e o valor de exportação (em dólares US$) dos maiores consumidores de vinho dentro dos últimos 15 anos.
             '''
@@ -270,7 +270,7 @@ with tab1:
             '''
             st.divider()
             '''
-            ## Exportações ano a ano por país de destino:
+            ## Exportações ano a ano por país de destino
 
             Além do montante total acumulado dos últimos 15 anos, informações importantes podem ser obtidas do total exportado por ano em cada um dos 10 principais países importadores de vinho gaúcho, como mostra o gráfico abaixo.
             '''
@@ -303,7 +303,7 @@ with tab1:
             '''
         with tab1_1:
             '''
-            ## Preço médio do vinho:
+            ## Preço médio do vinho
 
             Nesta seção, tem-se uma visão do preço médio do litro de vinho exportado para cada país
             
@@ -325,7 +325,7 @@ with tab1:
             st.divider()
             '''
 
-            ## Preço médio e total de litros exportados:
+            ## Preço médio e total de litros exportados
 
             Neste gráfico, é apresentada uma comparação do preço médio e o total de litros de vinho exportado para todos os demais países da análise.
             '''
@@ -361,7 +361,7 @@ with tab1:
 
 with tab2:
     '''
-    ## Fatores externos que podem influenciar nas exportações:
+    ## Fatores externos que podem influenciar nas exportações
 
     '''
     tab2_0, tab2_1, tab2_2 = st.tabs(["🌦️Clima",
@@ -369,7 +369,7 @@ with tab2:
                                       "💵Economia"])
     with tab2_0:
         '''
-        ## Exportações de vinho e temperatura média anual:
+        ## Exportações de vinho e temperatura média anual
 
         Geralmente, é comum a associação entre clima frio e o consumo de vinho. No Brasil, por exemplo, as vendas de vinho no inverno aumentam drasticamente:
         
@@ -393,7 +393,7 @@ with tab2:
         '''    
         st.divider()
         '''
-        ## Exportações de vinho per capita e média anual de temperatura:
+        ## Exportações de vinho per capita e média anual de temperatura
 
         Como forma de ponderar o tamanho da população de cada país, o gráfico abaixo relaciona o consumo de vinho per capita e a quantidade de vinho exportada nos últimos 15 anos.
         '''
@@ -412,7 +412,7 @@ with tab2:
         '''
         st.divider()
         '''
-        ## Influência dos aspectos climáticos nos países com maiores exportações:
+        ## Influência dos aspectos climáticos nos países com maiores exportações
 
         Por fim, no gráfico a seguir estão destacados os 10 principais países compradores de vinho do RS e como a temperatura média anual destes países varia.
         '''
@@ -446,7 +446,7 @@ with tab2:
     with tab2_1:
         '''
 
-        ## Demografia das exportações:
+        ## Demografia das exportações
 
         A seguir, são comparados o valor de exportação (em dólares) e o tamanho da população dos maiores consumidores da vinícola.
         '''
@@ -480,7 +480,7 @@ with tab2:
     with tab2_2:
         '''
         
-        ## Economia global x exportação:
+        ## Economia global x exportação
 
         A seguir, é possível comparar pelo gráfico de rosca o valor de exportação dos últimos 15 anos com o PIB de cada um dos países com maior consumo de vinho.
         '''
@@ -521,7 +521,7 @@ with tab2:
 
 with tab3:
     '''
-        ## Análise BI:
+        ## Análise BI
 
         A seguir, podemos verificar uma análise mais aprofundada dos dados.
     '''
@@ -529,7 +529,7 @@ with tab3:
 
 with tab4:
     '''
-    ## Ranking de exportações ao longo dos anos:
+    ## Ranking de exportações ao longo dos anos
 
     A seguir, podemos verificar o histórico do ranking dos maiores consumidores da vinícola ao longo dos últimos 15 anos.
     '''
@@ -550,7 +550,7 @@ with tab4:
     st.divider()
     '''
 
-    ## Visão global:
+    ## Visão global
 
     A seguir, podemos ter uma visão global da exportação de quantidade de vinho em litros da vinícola.
     '''
@@ -580,7 +580,7 @@ with tab4:
 
 with tab5:
     '''
-    ## Prospecções futuras:
+    ## Prospecções futuras
 
     A seguir, podemos verificar pelo gráfico de linhas o valor cumulativo em dólares de exportações futuras simulado para os próximos 5 anos no estado do Rio Grande do Sul.
     
@@ -659,7 +659,7 @@ with tab5:
 
 with tab6:
     '''
-    ## Referências: 
+    ## Referências
     
     1. Banco de dados de uva, vinho e derivados. In: Dados da Vitivinicultura. [Bento Gonçalves, RS: Embrapa, Uva e Vinho], 2022. Disponível em: http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_06. Acessado em: 28 de jun. 2023.
 
