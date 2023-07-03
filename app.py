@@ -30,8 +30,8 @@ valor_futuro["ano"] = pd.to_datetime(valor_futuro["ano"], format='%Y')
 economia_mundial = pd.read_csv('Assets/DataFrames/economia_mundial_merge.csv')
 exportacoes_ultimos_15_anos = pd.read_csv('Assets/DataFrames/exportacoes_ultimos_15_anos.csv')
 exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.drop(exportacoes_ultimos_15_anos.columns[0], axis='columns')
-exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.set_index('pais_de_destino')
-exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.rename(columns={'pais_de_origem_brasil' : 'pais_de_origem'})
+exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.rename(columns={'pais_de_destino' : 'Destino', 'pais_de_origem_brasil' : 'Origem', 'quantidade_em_litros_de_vinho_exportado' : 'Litros de vinho', 'valor_em_us' : 'Valor em dólares'})
+exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.set_index('Destino')
 
 #Titulo de Página
 st.title('Análise de dados: explorando dados de exportação vinícola do Estado do Rio Grande do Sul')
@@ -147,7 +147,7 @@ with tab0:
 
     # Adicionando o DataFrame
     df = pd.DataFrame(exportacoes_ultimos_15_anos)
-    st.dataframe(df,use_container_width=True)
+    st.dataframe(df, use_container_width=True)
 
     # Botão de Download do DataFrame
     st.download_button(
