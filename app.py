@@ -534,7 +534,7 @@ with tab3:
 
         Analisando os países com maior valor gasto com importações de vinhos temos o cenário abaixo:
 
-            Paraguai: Teve um aumento de 85% nas importação de vinho ao longo do período;
+            Paraguai: Teve um aumento de 85% nas importações de vinho ao longo do período;
         
             Rússia: Apresentou um pico em 2013 e, a partir dali uma queda de -98%;
         
