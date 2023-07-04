@@ -25,10 +25,18 @@ st.set_page_config(
 )
 
 #Lendo a base de dados e tratanto a base de dados
-valor_futuro = pd.read_csv('Assets/DataFrames/valor_futuro.csv')
-valor_futuro["ano"] = pd.to_datetime(valor_futuro["ano"], format='%Y')
-economia_mundial = pd.read_csv('Assets/DataFrames/economia_mundial_merge.csv')
-exportacoes_ultimos_15_anos = pd.read_csv('Assets/DataFrames/exportacoes_ultimos_15_anos.csv')
+@st.cache_data
+def read_csv_file(file):
+    return pd.read_csv(file)
+
+@st.cache_data
+def transform_to_datetime(df, string):
+    return pd.to_datetime(df, format=string)
+
+valor_futuro = read_csv_file('Assets/DataFrames/valor_futuro.csv')
+valor_futuro["ano"] = transform_to_datetime(valor_futuro["ano"], '%Y')
+economia_mundial = read_csv_file('Assets/DataFrames/economia_mundial_merge.csv')
+exportacoes_ultimos_15_anos = read_csv_file('Assets/DataFrames/exportacoes_ultimos_15_anos.csv')
 exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.drop(exportacoes_ultimos_15_anos.columns[0], axis='columns')
 exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.rename(columns={'pais_de_destino' : 'Destino', 'pais_de_origem_brasil' : 'Origem', 'quantidade_em_litros_de_vinho_exportado' : 'Litros de vinho', 'valor_em_us' : 'Valor em dólares'})
 exportacoes_ultimos_15_anos = exportacoes_ultimos_15_anos.set_index('Destino')
