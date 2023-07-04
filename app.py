@@ -1,7 +1,6 @@
 #Libs
 
 import pandas as pd
-import requests
 
 #libs gráficas
 import matplotlib.pyplot as plt
@@ -11,7 +10,6 @@ from plotly.subplots import make_subplots
 
 #Streamlit
 import streamlit as st
-from streamlit_lottie import st_lottie
 
 # Configurando a página
 st.set_page_config(
@@ -60,19 +58,6 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-@st.cache_data
-def load_url(url):
-    return requests.get(
-    url)
-
-# Importando animação do Lottie
-url = load_url("https://assets10.lottiefiles.com/private_files/lf30_kxzary5v.json")
-url_json = dict()
-if url.status_code == 200:
-    url_json = url.json()
-else:
-    print("Error in URL")
-
 # Carregamento de imagens por cach
 @st.cache_data
 def load_img(img):
@@ -91,25 +76,6 @@ tab0, tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔷Início",
 with tab0:
     '''
     ## Análise de dados de exportação vinícola do Estado do Rio Grande do Sul
-
-    '''
-    # Adicionando uma animação do Lottie (Imagem de garrafa e taça de vinho)
-    st_lottie(url_json,
-          # mudar direção da animação
-          reverse=False,
-          # Altura e largura da animação
-          height=200,  
-          width=200,
-          # velocidade da animação
-          speed=1.25,  
-          # repetir animação
-          loop=True,  
-          # qualidade dos elementos da animação
-          quality='high',
-           # Identificador da animação
-          key='Vinho' 
-          )
-    '''
 
     Links importantes:
 
