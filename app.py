@@ -111,7 +111,7 @@ with tab0:
 
     Os demais dados como os climáticos, demográficos e econômicos serão apontados ao longo da análise, tendo sua fonte referenciada na última aba desse documento.
 
-    A seguir, disponibilizamos os dados utilizados para a análise no momento da publicação deste documento, assim como um quadro com a visão geral das análises gráficas realizadas.
+    A seguir, disponibilizamos os dados utilizados para a análise no momento da publicação deste documento.
 
     '''
     st.divider()
@@ -143,16 +143,6 @@ with tab0:
         file_name='exportacoes_ultimos_15_anos.csv',
         mime='text/csv',
     )
-
-    st.divider()
-    '''
-
-    #### Visão geral das exportações do Estado do Rio Grande do Sul
-    '''
-
-    # Adicionando imagem do Grafico
-    graf_1 = load_img('Assets/Graficos/quadro.png')
-    st.image(graf_1)
 
     st.divider()
     '''
