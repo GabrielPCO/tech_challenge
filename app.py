@@ -61,6 +61,11 @@ if url.status_code == 200:
 else:
     print("Error in URL")
 
+# Carregamento de imagens por cach
+@st.cache_data
+def load_img(img):
+    return plt.imread(img)
+
 # Layout do aplicativo
 tab0, tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🔷Início",
                                                     "📝Dados", 
@@ -146,8 +151,12 @@ with tab0:
     csv = convert_df(exportacoes_ultimos_15_anos)
 
     # Adicionando o DataFrame
-    df = pd.DataFrame(exportacoes_ultimos_15_anos)
-    st.dataframe(df, use_container_width=True)
+    @st.cache_data
+    def create_df(df):
+        return pd.DataFrame(df)
+    
+    dataframe = create_df(exportacoes_ultimos_15_anos)
+    st.dataframe(dataframe, use_container_width=True)
 
     # Botão de Download do DataFrame
     st.download_button(
@@ -164,7 +173,7 @@ with tab0:
     '''
 
     # Adicionando imagem do Grafico
-    graf_1 = plt.imread('Assets/Graficos/quadro.png')
+    graf_1 = load_img('Assets/Graficos/quadro.png')
     st.image(graf_1)
 
     st.divider()
@@ -191,7 +200,7 @@ with tab1:
             '''
 
             #Adicionando imagem do Grafico
-            graf_1970_2021 = plt.imread('Assets/Graficos/areaplot_exportacoes_ano_a_ano_acumulado.png')
+            graf_1970_2021 = load_img('Assets/Graficos/areaplot_exportacoes_ano_a_ano_acumulado.png')
             st.image(graf_1970_2021)
 
             '''
@@ -214,7 +223,7 @@ with tab1:
             '''
             
             # Adicionando imagem do Grafico
-            graf_2 = plt.imread('Assets/Graficos/maiores_consumidores.png')
+            graf_2 = load_img('Assets/Graficos/maiores_consumidores.png')
             st.image(graf_2)
 
             '''
@@ -235,7 +244,7 @@ with tab1:
             '''
 
             # Adicionando imagem do Grafico
-            graf_3 = plt.imread('Assets/Graficos/valor_exportado.png')
+            graf_3 = load_img('Assets/Graficos/valor_exportado.png')
             st.image(graf_3)
 
             '''
@@ -256,7 +265,7 @@ with tab1:
             '''
 
             # Adicionando imagem do Grafico
-            graf_4 = plt.imread('Assets/Graficos/exportacoes_internacionais_bidirecional.png')
+            graf_4 = load_img('Assets/Graficos/exportacoes_internacionais_bidirecional.png')
             st.image(graf_4)
 
             '''
@@ -275,7 +284,7 @@ with tab1:
             Além do montante total acumulado dos últimos 15 anos, informações importantes podem ser obtidas do total exportado por ano em cada um dos 10 principais países importadores de vinho gaúcho, como mostra o gráfico abaixo.
             '''
             # Adicionando imagem do Grafico
-            graf_exp_ano_ano = plt.imread('Assets/Graficos/top10_lineplot_exportacoes_ano_a_ano.png')
+            graf_exp_ano_ano = load_img('Assets/Graficos/top10_lineplot_exportacoes_ano_a_ano.png')
             st.image(graf_exp_ano_ano)
 
             '''
@@ -309,7 +318,7 @@ with tab1:
             
             No gráfico a seguir, estão evidenciados os 10 países com os maiores valores de preço médio do litro de vinho.
             '''
-            graf_5 = plt.imread('Assets/Graficos/preco_medio_bar.png')
+            graf_5 = load_img('Assets/Graficos/preco_medio_bar.png')
             st.image(graf_5)
 
             '''
@@ -330,7 +339,7 @@ with tab1:
             Neste gráfico, é apresentada uma comparação do preço médio e o total de litros de vinho exportado para todos os demais países da análise.
             '''
 
-            graf_6 = plt.imread('Assets/Graficos/preco_medio_scat.png')
+            graf_6 = load_img('Assets/Graficos/preco_medio_scat.png')
             st.image(graf_6)
 
             '''
@@ -377,7 +386,7 @@ with tab2:
 
         Seguindo essa lógica, países com temperaturas mais baixas possivelmente consomem mais vinho do que países mais quentes. Abaixo vemos um gráfico que relaciona a temperatura média anual de países para o qual o RS exportou vinho e a quantidade de vinho exportada nos últimos 15 anos.
         '''
-        graf_temp_exportacao = plt.imread('Assets/Graficos/lmplot_litros_exportados_temperatura_media.png')
+        graf_temp_exportacao = load_img('Assets/Graficos/lmplot_litros_exportados_temperatura_media.png')
         st.image(graf_temp_exportacao)
 
         '''
@@ -397,7 +406,7 @@ with tab2:
 
         Como forma de ponderar o tamanho da população de cada país, o gráfico abaixo relaciona o consumo de vinho per capita e a quantidade de vinho exportada nos últimos 15 anos.
         '''
-        graf_temp_exportacao_per_capita = plt.imread('Assets/Graficos/lmplot_litros_exportados_per_capita_temperatura_media.png')
+        graf_temp_exportacao_per_capita = load_img('Assets/Graficos/lmplot_litros_exportados_per_capita_temperatura_media.png')
         st.image(graf_temp_exportacao_per_capita)
         '''
         ##### Fonte - List of countries by average yearly temperature. Wikipédia.
@@ -416,7 +425,7 @@ with tab2:
 
         Por fim, no gráfico a seguir estão destacados os 10 principais países compradores de vinho do RS e como a temperatura média anual destes países varia.
         '''
-        graf_7 = plt.imread('Assets/Graficos/clima.png')
+        graf_7 = load_img('Assets/Graficos/clima.png')
         st.image(graf_7)
         '''
         ##### Fonte - List of countries by average yearly temperature. Wikipédia.
@@ -452,7 +461,7 @@ with tab2:
         '''
 
         # Adicionando imagem do Grafico
-        graf_8 = plt.imread('Assets/Graficos/demografia_bidirecional.png')
+        graf_8 = load_img('Assets/Graficos/demografia_bidirecional.png')
         st.image(graf_8)
 
         '''
@@ -566,7 +575,7 @@ with tab4:
     '''
 
     # Adicionando imagem do Grafico
-    graf_9 = plt.imread('Assets/Graficos/ranking.png')
+    graf_9 = load_img('Assets/Graficos/ranking.png')
     st.image(graf_9)
 
     '''
@@ -587,7 +596,7 @@ with tab4:
     '''
 
     # Adicionando imagem do Grafico
-    graf_10 = plt.imread('Assets/Graficos/mundo.png')
+    graf_10 = load_img('Assets/Graficos/mundo.png')
     st.image(graf_10)
     
     '''
