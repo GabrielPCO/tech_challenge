@@ -60,9 +60,13 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
+@st.cache_data
+def load_url(url):
+    return requests.get(
+    url)
+
 # Importando animação do Lottie
-url = requests.get(
-    "https://assets10.lottiefiles.com/private_files/lf30_kxzary5v.json")
+url = load_url("https://assets10.lottiefiles.com/private_files/lf30_kxzary5v.json")
 url_json = dict()
 if url.status_code == 200:
     url_json = url.json()
