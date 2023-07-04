@@ -4,10 +4,3 @@ backgroundColor="#1C1C1B"
 secondaryBackgroundColor="#2D2D2B"
 textColor="#E9E9E9"
 font="sans serif"
-
-[server]
-headless = true
-port = 8501
-
-[browser]
-gatherUsageStats = false
