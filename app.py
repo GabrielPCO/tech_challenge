@@ -168,7 +168,7 @@ with tab1:
             '''
 
             #Adicionando imagem do Grafico
-            graf_1970_2021 = load_img('Assets/Graficos/areaplot_exportacoes_ano_a_ano_acumulado.png')
+            graf_1970_2021 = load_img('Assets/Graficos/areaplot_exportacoes_ano_a_ano_acumulado.jpg')
             st.image(graf_1970_2021)
 
             '''
@@ -191,7 +191,7 @@ with tab1:
             '''
             
             # Adicionando imagem do Grafico
-            graf_2 = load_img('Assets/Graficos/maiores_consumidores.png')
+            graf_2 = load_img('Assets/Graficos/maiores_consumidores.jpg')
             st.image(graf_2)
 
             '''
@@ -212,7 +212,7 @@ with tab1:
             '''
 
             # Adicionando imagem do Grafico
-            graf_3 = load_img('Assets/Graficos/valor_exportado.png')
+            graf_3 = load_img('Assets/Graficos/valor_exportado.jpg')
             st.image(graf_3)
 
             '''
@@ -233,7 +233,7 @@ with tab1:
             '''
 
             # Adicionando imagem do Grafico
-            graf_4 = load_img('Assets/Graficos/exportacoes_internacionais_bidirecional.png')
+            graf_4 = load_img('Assets/Graficos/exportacoes_internacionais_bidirecional.jpg')
             st.image(graf_4)
 
             '''
@@ -252,7 +252,7 @@ with tab1:
             Além do montante total acumulado dos últimos 15 anos, informações importantes podem ser obtidas do total exportado por ano em cada um dos 10 principais países importadores de vinho gaúcho, como mostra o gráfico abaixo.
             '''
             # Adicionando imagem do Grafico
-            graf_exp_ano_ano = load_img('Assets/Graficos/top10_lineplot_exportacoes_ano_a_ano.png')
+            graf_exp_ano_ano = load_img('Assets/Graficos/top10_lineplot_exportacoes_ano_a_ano.jpg')
             st.image(graf_exp_ano_ano)
 
             '''
@@ -286,7 +286,7 @@ with tab1:
             
             No gráfico a seguir, estão evidenciados os 10 países com os maiores valores de preço médio do litro de vinho.
             '''
-            graf_5 = load_img('Assets/Graficos/preco_medio_bar.png')
+            graf_5 = load_img('Assets/Graficos/preco_medio_bar.jpg')
             st.image(graf_5)
 
             '''
@@ -307,7 +307,7 @@ with tab1:
             Neste gráfico, é apresentada uma comparação do preço médio e o total de litros de vinho exportado para todos os demais países da análise.
             '''
 
-            graf_6 = load_img('Assets/Graficos/preco_medio_scat.png')
+            graf_6 = load_img('Assets/Graficos/preco_medio_scat.jpg')
             st.image(graf_6)
 
             '''
@@ -354,7 +354,7 @@ with tab2:
 
         Seguindo essa lógica, países com temperaturas mais baixas possivelmente consomem mais vinho do que países mais quentes. Abaixo vemos um gráfico que relaciona a temperatura média anual de países para o qual o RS exportou vinho e a quantidade de vinho exportada nos últimos 15 anos.
         '''
-        graf_temp_exportacao = load_img('Assets/Graficos/lmplot_litros_exportados_temperatura_media.png')
+        graf_temp_exportacao = load_img('Assets/Graficos/lmplot_litros_exportados_temperatura_media.jpg')
         st.image(graf_temp_exportacao)
 
         '''
@@ -374,7 +374,7 @@ with tab2:
 
         Como forma de ponderar o tamanho da população de cada país, o gráfico abaixo relaciona o consumo de vinho per capita e a quantidade de vinho exportada nos últimos 15 anos.
         '''
-        graf_temp_exportacao_per_capita = load_img('Assets/Graficos/lmplot_litros_exportados_per_capita_temperatura_media.png')
+        graf_temp_exportacao_per_capita = load_img('Assets/Graficos/lmplot_litros_exportados_per_capita_temperatura_media.jpg')
         st.image(graf_temp_exportacao_per_capita)
         '''
         ##### Fonte - List of countries by average yearly temperature. Wikipédia.
@@ -393,7 +393,7 @@ with tab2:
 
         Por fim, no gráfico a seguir estão destacados os 10 principais países compradores de vinho do RS e como a temperatura média anual destes países varia.
         '''
-        graf_7 = load_img('Assets/Graficos/clima.png')
+        graf_7 = load_img('Assets/Graficos/clima.jpg')
         st.image(graf_7)
         '''
         ##### Fonte - List of countries by average yearly temperature. Wikipédia.
@@ -429,7 +429,7 @@ with tab2:
         '''
 
         # Adicionando imagem do Grafico
-        graf_8 = load_img('Assets/Graficos/demografia_bidirecional.png')
+        graf_8 = load_img('Assets/Graficos/demografia_bidirecional.jpg')
         st.image(graf_8)
 
         '''
@@ -543,7 +543,7 @@ with tab4:
     '''
 
     # Adicionando imagem do Grafico
-    graf_9 = load_img('Assets/Graficos/ranking.png')
+    graf_9 = load_img('Assets/Graficos/ranking.jpg')
     st.image(graf_9)
 
     '''
@@ -564,7 +564,7 @@ with tab4:
     '''
 
     # Adicionando imagem do Grafico
-    graf_10 = load_img('Assets/Graficos/mundo.png')
+    graf_10 = load_img('Assets/Graficos/mundo.jpg')
     st.image(graf_10)
     
     '''
